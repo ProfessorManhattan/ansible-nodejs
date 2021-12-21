@@ -71,6 +71,9 @@
   },
   "blueprint": {
     "description": "Installs Node.js on nearly any platform",
+    "github_id": "R_kgDOGj_OKw",
+    "gitlab_group_id": "12261670",
+    "gitlab_project_id": "32280044",
     "group": "ansible",
     "name": "Node.js",
     "overview": "[Node.js](https://nodejs.org/en/) is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
@@ -81,9 +84,7 @@
     "slug": "nodejs",
     "subgroup": "role",
     "title": "Node.js",
-    "github_id": "R_kgDOGj_OKw",
-    "gitlab_project_id": "32280044",
-    "gitlab_group_id": "12261670"
+    "ansible_galaxy_project_id": "57324"
   },
   "commitlint": {
     "extends": [

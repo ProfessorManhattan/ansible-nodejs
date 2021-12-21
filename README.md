@@ -30,7 +30,7 @@
 <br/>
 <div align="center">
   <a title="Ansible Galaxy role: professormanhattan.nodejs" href="https://galaxy.ansible.com/professormanhattan/nodejs" target="_blank">
-    <img alt="Ansible Galaxy role: professormanhattan.nodejs" src="https://img.shields.io/ansible/role/ansible_galaxy_project_id?logo=ansible&style=flat-square" />
+    <img alt="Ansible Galaxy role: professormanhattan.nodejs" src="https://img.shields.io/ansible/role/57324?logo=ansible&style=flat-square" />
   </a>
   <a title="Version: 1.0.0" href="https://github.com/ProfessorManhattan/ansible-nodejs" target="_blank">
     <img alt="Version: 1.0.0" src="https://img.shields.io/badge/version-1.0.0-blue.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAACNJREFUCNdjIACY//+BEp9hhM3hAzYQwoBIAqEDYQrCZLwAAGlFKxU1nF9cAAAAAElFTkSuQmCC&cacheSeconds=2592000&style=flat-square" />
@@ -48,10 +48,10 @@
     <img alt="Linux Molecule test status" src="https://img.shields.io/gitlab/pipeline-status/megabyte-labs/ansible-roles/nodejs?branch=test%2Flinux&label=linux&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAElBMVEUAAAAwPEEuOEIxOzswPj7///91+pI+AAAABXRSTlMANRkNJejDPNcAAAB+SURBVCjPddHBDYAgDIXhGtMRHMG7S3hvTP79VxFIQVq1wOVLm7wU8QIJpSThC2wGwwJoPQFKRdiAAIhGsAykZNSZAOVNMx4BMjwtpySgr6CDJdB/MAdJwAvSiFoE5aABHUb0ch0WHNQq+KPAOgCgrbEnbjAHArjGz3jr3hpumrQpvwi66rkAAAAASUVORK5CYII=&style=flat-square">
   </a>
   <a title="Ansible Galaxy quality score (out of 5)" href="https://galaxy.ansible.com/professormanhattan/nodejs" target="_blank">
-    <img alt="Ansible Galaxy quality score" src="https://img.shields.io/ansible/quality/ansible_galaxy_project_id?logo=ansible&style=flat-square" />
+    <img alt="Ansible Galaxy quality score" src="https://img.shields.io/ansible/quality/57324?logo=ansible&style=flat-square" />
   </a>
   <a title="Ansible Galaxy download count" href="https://galaxy.ansible.com/professormanhattan/nodejs" target="_blank">
-    <img alt="Ansible Galaxy download count" src="https://img.shields.io/ansible/role/d/ansible_galaxy_project_id?logo=ansible&label=downloads&style=flat-square">
+    <img alt="Ansible Galaxy download count" src="https://img.shields.io/ansible/role/d/57324?logo=ansible&label=downloads&style=flat-square">
   </a>
   <a title="Documentation" href="https://megabyte.space/docs/ansible" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg?logo=readthedocs&style=flat-square" />
@@ -124,12 +124,12 @@ This role contains variables that you can customize. The variables you can custo
 | Name                       | Default Value        | Description                                                                                                                                                  |
 | -------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | https_repository_prefix    | `https://`           | Variable for setting the HTTPS repository prefix. Need to change this to http://HTTPS/// if AptCacherNG is being used.                                       |
+| npm_global_packages        | `false`              | When true, the role installs the packages listed in `nodejs_npm_global_packages`                                                                             |
+| nodejs_install_nvm_windows | `true`               | Variable to select whether or not to install NVM on Windows                                                                                                  |
+| nodejs_npm_global_packages | `[]`                 | Variable to define a list of global packages to be installed with NPM.                                                                                       |
 | nodejs_version             | `15.x`               | Set the version of Node.js to install (8.x", "10.x", "12.x", "13.x", etc.). Version numbers are from Nodesource: https://github.com/nodesource/distributions |
 | npm_config_prefix          | `/usr/local/lib/npm` | Configures the directory for global NPM installations.                                                                                                       |
 | npm_config_unsafe_perm     | `false`              | Set to true to suppress the UID/GID switching when running package scripts. If set explicitly to false, then installing as a non-root user will fail.        |
-| npm_global_packages        | `false`              | When true, the role installs the packages listed in `nodejs_npm_global_packages`                                                                             |
-| nodejs_npm_global_packages | `[]`                 | Variable to define a list of global packages to be installed with NPM.                                                                                       |
-| nodejs_install_nvm_windows | `true`               | Variable to select whether or not to install NVM on Windows                                                                                                  |
 
 ### Variable Examples
 

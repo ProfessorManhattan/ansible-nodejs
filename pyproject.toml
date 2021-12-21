@@ -7,7 +7,7 @@ license = "MIT"
 readme = "README.md"
 homepage = "https://megabyte.space"
 documentation = "https://megabyte.space/docs/ansible/roles"
-keywords = [""]
+keywords = ["ansible", "ansible-role", "archlinux", "centos", "debian", "development", "doctor", "fedora", "install", "installdoc", "installdoctor", "javascript", "js", "macos", "mblabs", "megabytelabs", "molecule", "node", "nodejs", "npm", "professormanhattan", "role", "ubuntu", "washingtondc", "web", "windows"]
 include = ["CHANGELOG.md", "LICENSE"]
 classifiers = [
   "Development Status :: 4 - Beta",
