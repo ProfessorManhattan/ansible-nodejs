@@ -80,7 +80,10 @@
     },
     "slug": "nodejs",
     "subgroup": "role",
-    "title": "Node.js"
+    "title": "Node.js",
+    "github_id": "R_kgDOGj_OKw",
+    "gitlab_project_id": "32280044",
+    "gitlab_group_id": "12261670"
   },
   "commitlint": {
     "extends": [

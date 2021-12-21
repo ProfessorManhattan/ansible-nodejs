@@ -1,6 +1,7 @@
 ---
 galaxy_info:
   role_name: nodejs
+  namespace: professormanhattan
   author: ProfessorManhattan
   description: Installs Node.js on nearly any platform
   company: Megabyte Labs
@@ -45,7 +46,6 @@ galaxy_info:
     - washingtondc
     - web
     - windows
-  namespace: professormanhattan
 dependencies:
   - role: professormanhattan.homebrew
     when: ansible_os_family == "Darwin"
