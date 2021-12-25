@@ -4,7 +4,7 @@ specifiers:
   '@washingtondc/development': ^1.0.2
   '@washingtondc/prettier': ^1.0.0
   '@washingtondc/release': ^0.0.2
-  eslint-config-strict-mode: ^1.0.0
+  eslint-config-strict-mode: ^1.0.4
   sleekfast: ^0.0.1
 
 devDependencies:
@@ -1274,7 +1274,7 @@ packages:
   /@octokit/types/2.16.2:
     resolution: {integrity: sha512-O75k56TYvJ8WpAakWwYRN8Bgu60KrmX0z1KqFp1kNiFNkgW+JW+9EBKZ+S33PU6SLvbihqd+3drvPxKK68Ee8Q==}
     dependencies:
-      '@types/node': 17.0.2
+      '@types/node': 17.0.4
     dev: true
 
   /@octokit/types/6.34.0:
@@ -1291,8 +1291,8 @@ packages:
       esquery: 1.4.0
     dev: true
 
-  /@prettier/plugin-xml/1.1.0:
-    resolution: {integrity: sha512-ftQAIB3icdzvfMWmQ6HhxWFwIkVE2bZaPb2Z2YgX9BVqq3ucf33eQAdPwD1wWvPwXwbeZvDoz60vYZv/Qjq+rg==}
+  /@prettier/plugin-xml/1.2.0:
+    resolution: {integrity: sha512-bFvVAZKs59XNmntYjyefn3K4TBykS6E+d6ZW8IcylAs88ZO+TzLhp0dPpi0VKfPzq1Nb+kpDnPRTiwb4zY6NgA==}
     dependencies:
       '@xml-tools/parser': 1.0.11
       prettier: 2.5.1
@@ -1617,7 +1617,7 @@ packages:
     dependencies:
       '@types/http-cache-semantics': 4.0.1
       '@types/keyv': 3.1.3
-      '@types/node': 17.0.2
+      '@types/node': 17.0.4
       '@types/responselike': 1.0.0
     dev: true
 
@@ -1644,7 +1644,7 @@ packages:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
     dependencies:
       '@types/minimatch': 3.0.5
-      '@types/node': 17.0.2
+      '@types/node': 17.0.4
     dev: true
 
   /@types/http-cache-semantics/4.0.1:
@@ -1678,7 +1678,7 @@ packages:
   /@types/keyv/3.1.3:
     resolution: {integrity: sha512-FXCJgyyN3ivVgRoml4h94G/p3kY+u/B86La+QptcqJaWtBWtmc6TtkNfS40n9bIvyLteHh7zXOtgbobORKPbDg==}
     dependencies:
-      '@types/node': 17.0.2
+      '@types/node': 17.0.4
     dev: true
 
   /@types/minimatch/3.0.5:
@@ -1689,8 +1689,8 @@ packages:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
-  /@types/node/17.0.2:
-    resolution: {integrity: sha512-JepeIUPFDARgIs0zD/SKPgFsJEAF0X5/qO80llx59gOxFTboS9Amv3S+QfB7lqBId5sFXJ99BN0J6zFRvL9dDA==}
+  /@types/node/17.0.4:
+    resolution: {integrity: sha512-6xwbrW4JJiJLgF+zNypN5wr2ykM9/jHcL7rQ8fZe2vuftggjzZeRSM4OwRc6Xk8qWjwJ99qVHo/JgOGmomWRog==}
     dev: true
 
   /@types/node/17.0.4:
@@ -1708,7 +1708,7 @@ packages:
   /@types/responselike/1.0.0:
     resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
     dependencies:
-      '@types/node': 17.0.2
+      '@types/node': 17.0.4
     dev: true
 
   /@types/retry/0.12.1:
@@ -1738,7 +1738,7 @@ packages:
   /@types/yauzl/2.9.1:
     resolution: {integrity: sha512-A1b8SU4D10uoPjwb0lnHmmu8wZhR9d+9o2PKBQT2jU5YPTKsxac6M2qGAdY7VcL+dHHhARVUDmeg0rOrcd9EjA==}
     dependencies:
-      '@types/node': 17.0.2
+      '@types/node': 17.0.4
     dev: true
 
   /@typescript-eslint/eslint-plugin-tslint/5.8.0_eslint@8.5.0+tslint@6.1.3:
@@ -1924,7 +1924,7 @@ packages:
     resolution: {integrity: sha512-6mrxp2wzcgBhHbAZ0NJugZm1uzdsqTxrdWFnRBEThRaf/d1jZOw2W+8UTzgpVvTB5lmaoegVORJRkQRVtcc8TQ==}
     engines: {node: '>=10'}
     dependencies:
-      '@prettier/plugin-xml': 1.1.0
+      '@prettier/plugin-xml': 1.2.0
       prettier: 2.5.1
       prettier-plugin-go-template: 0.0.11_prettier@2.5.1
       prettier-plugin-ini: 0.3.1
@@ -3273,7 +3273,7 @@ packages:
   /chrome-launcher/0.13.4:
     resolution: {integrity: sha512-nnzXiDbGKjDSK6t2I+35OAPBy5Pw/39bgkb/ZAFwMhwJbdYBp6aH+vW28ZgtjdU890Q7D+3wN/tB8N66q5Gi2A==}
     dependencies:
-      '@types/node': 17.0.2
+      '@types/node': 17.0.4
       escape-string-regexp: 1.0.5
       is-wsl: 2.2.0
       lighthouse-logger: 1.3.0
@@ -3800,7 +3800,7 @@ packages:
 
   /core-js/2.6.12:
     resolution: {integrity: sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==}
-    deprecated: core-js@<3.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+    deprecated: core-js@<3.4 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
     requiresBuild: true
     dev: true
 
@@ -9637,7 +9637,7 @@ packages:
   /parse5/3.0.3:
     resolution: {integrity: sha512-rgO9Zg5LLLkfJF9E6CCmXlSE4UVceloys8JrFqCcHloC3usd/kJCyPDwH2SOlzix2j3xaP9sUX3e8+kvkuleAA==}
     dependencies:
-      '@types/node': 17.0.2
+      '@types/node': 17.0.4
     dev: true
 
   /parse5/6.0.1:
