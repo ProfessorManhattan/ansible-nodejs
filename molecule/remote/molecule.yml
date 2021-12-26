@@ -6,7 +6,6 @@ driver:
     ansible_connection_options:
       ansible_connection: ssh
       ansible_host: ${TEST_HOST}
-      ansible_password: ${TEST_PASSWORD}
       ansible_port: ${TEST_PORT:-22}
       ansible_ssh_user: ${TEST_SSH_USER}
     managed: false
