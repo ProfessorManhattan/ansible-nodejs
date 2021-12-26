@@ -93,5 +93,6 @@ provisioner:
         ansible_user: ${TEST_USER:-vagrant}
     host_vars:
       Windows-10:
+        ansible_connection: winrm
         ansible_host: 127.0.0.1
         ansible_port: 55985
