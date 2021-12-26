@@ -1,6 +1,6 @@
 ---
 - name: Prepare
-  hosts: "{{ lookup('env', 'MOLECULE_GROUP') | default('all', true) }}:!Windows"
+  hosts: "{{ lookup('env', 'MOLECULE_GROUP') | default('all', true) }}"
   gather_facts: false
   tasks:
     - become: true
