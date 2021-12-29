@@ -18,8 +18,8 @@
   "scripts": {
     "help": "task --list",
     "prepare": "task common:husky",
-    "repair": "bash <(curl -sS https://install.doctor/repair)",
     "permissions": "find . -print0 | xargs -0 sudo chown $USER:$USER",
+    "repair": "bash <(curl -sS https://install.doctor/repair)",
     "start": "bash .config/start.sh"
   },
   "config": {
