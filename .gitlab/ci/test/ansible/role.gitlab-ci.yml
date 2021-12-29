@@ -41,7 +41,9 @@ test:molecule:linux:
     TZ: America/New_York
   before_script:
     - apt-get update -y
-    - apt-get install -y curl git
+    - echo "$DEBIAN_FRONTEND"
+    - echo "$TZ"
+    - DEBIAN_FRONTEND=noninteractive TZ=America/New_York apt-get install -y curl git tzdata
     - |
       if [ "$CI_COMMIT_BRANCH" == 'test/linux' ]; then
         git pull origin master
