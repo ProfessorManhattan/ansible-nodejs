@@ -25,7 +25,7 @@ test:molecule:darwin:
     - shared-macos-amd64
   script:
     - |
-      if [ "$CI_COMMIT_BRANCH" == 'test/darwin' ]; then
+      if [[ "$CI_COMMIT_BRANCH" == 'test/darwin' ]]; then
         git pull origin master
         git push origin "$CI_COMMIT_BRANCH"
       fi
