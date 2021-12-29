@@ -41,9 +41,6 @@ test:molecule:linux:
     TZ: America/New_York
   before_script:
     - apt-get update -y
-    - echo "$DEBIAN_FRONTEND"
-    - echo "$TZ"
-    - DEBIAN_FRONTEND="noninteractive" TZ="America/New_York" apt-get install -y tzdata
     - apt-get install -y curl git
     - |
       if [ "$CI_COMMIT_BRANCH" == 'test/linux' ]; then
@@ -53,6 +50,7 @@ test:molecule:linux:
     - bash <(curl -sS https://gitlab.com/megabyte-labs/common/shared/-/raw/master/common/.gitlab/ci/scripts/ubuntu-molecule-shim.sh)
     - bash .config/scripts/start.sh
   script:
+    - source ~/.profile
     - task ansible:test:molecule:docker:cli -- "$OPERATING_SYSTEM"
   artifacts:
     when: always
