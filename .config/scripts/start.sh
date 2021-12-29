@@ -25,7 +25,7 @@ SOURCE_PATH="$(
 PROJECT_BASE_DIR="$SOURCE_PATH/../.."
 INSTALL_PACKAGE_SCRIPT="$SOURCE_PATH/lib/package.sh"
 INSTALL_TASK_SCRIPT="$SOURCE_PATH/lib/task.sh"
-TMP_PROFILE_PATH="$(mktemp)"
+export TMP_PROFILE_PATH="$(mktemp)"
 VALID_TASKFILE_SCRIPT="$SOURCE_PATH/lib/taskfile.sh"
 
 # @description Ensure basic dependencies are installed
