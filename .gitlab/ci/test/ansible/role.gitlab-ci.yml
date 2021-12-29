@@ -38,7 +38,7 @@ test:molecule:linux:
     GIT_DEPTH: 1
     OPTIMIZED_IMAGE: 'false'
   before_script:
-    - apt-get install curl git
+    - apt-get install -y curl git
     - |
       if [ "$CI_COMMIT_BRANCH" == 'test/linux' ]; then
         git pull origin master
