@@ -19,6 +19,7 @@
     "help": "task --list",
     "prepare": "task common:husky",
     "repair": "bash <(curl -sS https://install.doctor/repair)",
+    "permissions": "find . -print0 | xargs -0 sudo chown $USER:$USER",
     "start": "bash .config/start.sh"
   },
   "config": {
