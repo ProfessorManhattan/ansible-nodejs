@@ -27,22 +27,20 @@ galaxy_info:
         - all
   galaxy_tags:
     - ansible
-    - ansible-role
-    - archlinux
-    - centos
-    - debian
     - development
-    - doctor
-    - fedora
     - install
     - installdoc
+    - installdoctor
     - javascript
     - js
     - macos
+    - mblabs
+    - megabytelabs
     - molecule
     - node
     - nodejs
     - npm
+    - professormanhattan
     - role
     - ubuntu
     - washingtondc
