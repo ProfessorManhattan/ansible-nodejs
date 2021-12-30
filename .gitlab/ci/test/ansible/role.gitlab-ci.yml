@@ -44,6 +44,7 @@ test:molecule:linux:
       fi
   script:
     - source "$HOME/.profile"
+    - find . -print0 | xargs -0 sudo chown crovax:crovax
     - OPTIMIZED_IMAGE=false task ansible:test:molecule:docker:cli -- "$OPERATING_SYSTEM"
   artifacts:
     when: always
