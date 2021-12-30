@@ -38,7 +38,7 @@ test:molecule:darwin:
     - export PATH="$(brew --prefix)/opt/gnu-tar/libexec/gnubin:$PATH"
     - brew install node python@3.10 poetry
     - bash .config/scripts/start.sh
-    - OPTIMIZED_IMAGE=false task ansible:test:molecule:local:test
+    - task ansible:test:molecule:local:test
   artifacts:
     when: always
     reports:
