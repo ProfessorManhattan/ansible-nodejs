@@ -12,16 +12,9 @@ galaxy_info:
     - name: EL
       versions:
         - 6
-        - 7
-        - 8
-    - name: Debian
-      versions:
-        - all
     - name: Ubuntu
       versions:
         - bionic
-        - trusty
-        - xenial
     - name: Windows
       versions:
         - all
