@@ -42,13 +42,13 @@
   "dependencies": {},
   "optionalDependencies": {},
   "devDependencies": {
+    "@commitlint/config-conventional": "latest",
     "eslint-config-strict-mode": "latest",
     "git-cz-emoji": "latest",
+    "handlebars-helpers": "latest",
     "prettier-config-sexy-mode": "latest",
     "semantic-release-config": "latest",
-    "typescript": "latest",
-    "@commitlint/config-conventional": "latest",
-    "handlebars-helpers": "latest"
+    "typescript": "latest"
   },
   "keywords": [
     "ansible",
@@ -113,7 +113,9 @@
     "showAuthor": true
   },
   "commitlint": {
-    "extends": [],
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
     "helpUrl": "https://megabyte.space/docs/contributing/commits"
   },
   "eslintConfig": {
@@ -130,9 +132,6 @@
     }
   ],
   "lint-staged": {
-    "(.dockerignore|.editorconfig|.eslintignore|.gitattributes|.gitconfig|.gitignore|.gitmodules|.nodemonignore|.npmignore|.prettierignore)": [
-      "task fix:prettier --"
-    ],
     "(Brewfile|composer.lock|Gemfile|Gopkg.lock|Pipfile.lock)": [
       "task fix:prettier --"
     ],
@@ -152,16 +151,6 @@
       "task fix:js --",
       "task lint:js --"
     ],
-    "**/*.(css|html|less|md|mjml|php|scss|sh|xml)": [
-      "task fix:prettier --"
-    ],
-    "**/*.(json|webapp|webmanifest)": [
-      "task fix:json --"
-    ],
-    "**/*.(js|jsx|ts|tsx)": [
-      "task fix:js --",
-      "task lint:js --"
-    ],
     "**/*.(yml|yaml)": [
       "task fix:yaml --",
       "task lint:yaml --"
@@ -169,9 +158,6 @@
     "**/*.go": [
       "task fix:go --",
       "task lint:go --"
-    ],
-    "**/*.json": [
-      "task fix:json --"
     ],
     "**/*.md": [
       "task fix:markdown --",
@@ -198,10 +184,6 @@
     "**/*.xml": [
       "task fix:xml --",
       "task lint:xml --"
-    ],
-    "**/*.yml": [
-      "task fix:yaml --",
-      "task lint:yaml --"
     ],
     "**/*vault.yml": [
       "task ansible:vault:lint:file --"
