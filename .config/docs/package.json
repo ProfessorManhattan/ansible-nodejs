@@ -17,14 +17,12 @@
   "type": "module",
   "scripts": {
     "build": "bash start.sh && task ansible:build:none",
-    "bump": "npm run build && npm version patch --no-commit-hooks --no-git-tag-version --force && npm publish",
     "commit": "bash start.sh && task commit",
     "fix": "bash start.sh && task fix",
     "help": "bash start.sh && task --menu",
     "lint": "bash start.sh && task lint",
     "preload": "bash start.sh && task preload",
     "prepare": "bash start.sh && (test -f Taskfile.yml && task npm:prepare) || true",
-    "permissions": "find . -print0 | xargs -0 sudo chown $USER:$USER",
     "prepublishOnly": "test -z $SKIP_PREPUB && bash start.sh && task npm:bundle:create || true",
     "release": "bash start.sh && task publish:semantic-release",
     "repair": "bash <(curl -sS https://install.doctor/repair)",
@@ -50,32 +48,10 @@
     "typescript": "^4.5.5"
   },
   "keywords": [
-    "ansible",
-    "ansible-role",
-    "archlinux",
-    "centos",
-    "debian",
-    "development",
-    "doctor",
-    "fedora",
-    "install",
-    "installdoc",
-    "installdoctor",
-    "javascript",
-    "js",
-    "macos",
     "mblabs",
     "megabytelabs",
-    "molecule",
-    "node",
-    "nodejs",
-    "npm",
     "professormanhattan",
-    "role",
-    "ubuntu",
-    "washingtondc",
-    "web",
-    "windows"
+    "washingtondc"
   ],
   "engines": {
     "node": ">=14.18.0"
@@ -85,21 +61,10 @@
     "access": "public"
   },
   "blueprint": {
-    "ansible_galaxy_project_id": "57324",
-    "description": "Installs Node.js on nearly any platform",
-    "github_id": "R_kgDOGj_OKw",
-    "gitlab_group_id": "",
-    "gitlab_project_id": "32280044",
-    "group": "ansible",
-    "name": "Node.js",
-    "overview": "[Node.js](https://nodejs.org/en/) is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
     "repository": {
       "github": "https://github.com/ProfessorManhattan/ansible-nodejs",
       "gitlab": "https://gitlab.com/megabyte-labs/ansible-roles/nodejs"
-    },
-    "slug": "nodejs",
-    "subgroup": "role",
-    "title": "Node.js"
+    }
   },
   "changelog": {
     "displayTypes": [
@@ -112,7 +77,9 @@
     "showAuthor": true
   },
   "commitlint": {
-    "extends": [],
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
     "helpUrl": "https://megabyte.space/docs/contributing/commits"
   },
   "eslintConfig": {
@@ -128,17 +95,82 @@
       "url": "https://www.patreon.com/ProfessorManhattan"
     }
   ],
+  "lint-staged": {
+    "(Brewfile|composer.lock|Gemfile|Gopkg.lock|Pipfile.lock)": [
+      "task fix:prettier --"
+    ],
+    "**/!(logo).(jpg|png)": [
+      "task image:compress --"
+    ],
+    "**/*": [
+      "task lint:any --"
+    ],
+    "**/*!(template).(json|webapp|webmanifest)": [
+      "task fix:json --"
+    ],
+    "**/*.(bash|cfg|cgi|command|css|env|env.*|handlebars|hbs|html|less|fcgi|java|md|mdx|mjml|php|phtml|properties|reg|scss|tmpl|tmux|tool|tpl|zsh)": [
+      "task fix:prettier --"
+    ],
+    "**/*.(cjs|js|jsx|mjs|ts|tsx)": [
+      "task fix:js --",
+      "task lint:js --"
+    ],
+    "**/*.(yml|yaml)": [
+      "task fix:yaml --",
+      "task lint:yaml --"
+    ],
+    "**/*.go": [
+      "task fix:go --",
+      "task lint:go --"
+    ],
+    "**/*.md": [
+      "task fix:markdown --",
+      "task lint:spelling:markdown --"
+    ],
+    "**/*.php": [
+      "task fix:php --",
+      "task lint:php --"
+    ],
+    "**/*.py": [
+      "task fix:python --",
+      "task lint:python --"
+    ],
+    "**/*.sh": [
+      "task fix:prettier --",
+      "task fix:shell --",
+      "task lint:shell --"
+    ],
+    "**/*.toml": [
+      "task fix:toml --",
+      "task fix:prettier --",
+      "task lint:toml --"
+    ],
+    "**/*.xml": [
+      "task fix:xml --",
+      "task lint:xml --"
+    ],
+    "Dockerfile": [
+      "task fix:prettier --",
+      "task lint:docker --"
+    ],
+    "Vagrantfile": [
+      "task fix:prettier --",
+      "task lint:vagrant"
+    ],
+    "logo.png": [
+      "task image:resize -- 200 200",
+      "task image:compress --"
+    ]
+  },
   "ntl": {
     "descriptions": {
       "build": "Builds the project using the build command specified under scripts in package.json",
-      "bump": "Used to quickly build, increase the package.json version, and publish the package",
       "commit": "If unsure, use this task to commit your code so that it adheres to our commit rules",
       "fix": "Run auto-fixing with all available auto-fixers",
       "help": "Display the Bodega Taskfile.yml interactive help menu",
       "lint": "Lint the project with all available linters",
       "preload": "Preload the operating system with commonly used libraries and tools",
       "prepare": "A hook triggered by running npm install that runs logic such as installing pre-commit hooks",
-      "publish": "Publish the software to all supported channels using semantic-release",
       "release": "Publish the software to all supported channels using semantic-release",
       "repair": "Fixes basic issues in projects that are having trouble running basic commands like 'task start'",
       "start": "Entrypoint for new developers that installs requirements and then runs 'task start'",
@@ -150,7 +182,6 @@
   "pnpm": {
     "allowedVersions": {
       "@typescript-eslint/eslint-plugin": "5",
-      "eslint": "8",
       "typescript": "4"
     },
     "neverBuiltDependencies": [
